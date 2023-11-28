@@ -24,4 +24,5 @@ then
 	     else
  echo $USER >> ~/.rdpuser_history
 	    fi
-xfreerdp +clipboard /u:$USER /v:$HOST /p:$pass  /drive:home,/home/elke /f /floatbar:sticky:on,default:visible,show:fullscreen /cert-ignore &
+HOME="/home/$(whoami)"
+xfreerdp +clipboard /u:$USER /v:$HOST /p:$pass  /drive:home,$HOME /f /floatbar:sticky:on,default:visible,show:fullscreen /cert-ignore &
