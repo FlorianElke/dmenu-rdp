@@ -4,7 +4,7 @@ HOST=$( cat ~/.rdphosts | dmenu -i -p "Please Select or Add Host")
 
 if grep -R "$HOST" ~/.rdphosts
 then
-	USER=$HOST
+	HOST=$HOST
 	     else
  echo $HOST >> ~/.rdphosts
 	    fi
